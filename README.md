@@ -1,3 +1,4 @@
+# A Ramble about the Undergraduate Computational Finance Courses at CMU
 
 <img src="https://img.freepik.com/premium-vector/personal-finance-cartoon_24640-41281.jpg" width="400" height="280">
 
