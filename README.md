@@ -2,9 +2,9 @@
 
 <img src="https://img.freepik.com/premium-vector/personal-finance-cartoon_24640-41281.jpg" width="400" height="280">
 
-Obviously, a lot of people have heard quant as a career, how it makes a lot of money, and people who are STEM-inclined should definitely try it out. As a CMU student, you probably heard of **21-270: Introduction to Mathematical Finance**. It introduces you to the ideas of quant finance, it satisfies as an elective for a lot of math concentrations, and is the stepping stone if you want to major or minor in computational finance. 
+Obviously, a lot of people have heard about quant as a career, how it makes a lot of money, and people who are STEM-inclined should definitely try it out. As a CMU student, you probably heard of **21-270: Introduction to Mathematical Finance**. It introduces you to the ideas of quant finance, it satisfies as an elective for a lot of math concentrations, and is the stepping stone if you want to major or minor in computational finance. 
 
-Honestly, I had no idea what the course was about until I took it. The only things I knew about it was that there was a 3 digit waitlist for the course. Since it was offered again in the summer, a lot of my friends took it, i decided to take it as well. Since the course descriptions are kind of outdated, I'm just here to ramble a bit about what the courses are like so y'all have an idea of whether to take them.
+Honestly, I had no idea what the course was about until I took it. The only things I knew about it was that there was a 3 digit waitlist for the course. Since it was offered again in the summer, a lot of my friends took it during the spring, so i decided to take it as well. Since the course descriptions are kind of outdated, I'm just here to ramble a bit about what the courses are like so y'all get an idea of whether to take them.
 
 ## What is Computational Finance about?
 
@@ -12,7 +12,7 @@ Honestly, I had no idea what the course was about until I took it. The only thin
 
 The short answer? Math in an applied context. It basically takes the ideas you learnt in probability courses, linear algebra courses, differential equations courses etc., and then apply them on a different context entirely. As you approach more advanced computational finance courses, it starts to go more in depth using stochastic calculus and some measure theory. Hence, it is a subject highly focused on precise calculations and proofs.
 
-The main topic of computational finance is pricing. Let's say that you have designed a game where you flip 2 coins. If the user gets 2 heads, they get paid 100 dollars. If they get 1 head, they get paid 80 dollars. Otherwise, they get nothing. How much should you charge them such that the game is fair? Fair as in you continue to make a profit, but also no one can give a lower price to steal your customers. As we create more and more complicated payouts, we will require more math to calculate such a price.
+The main topic of computational finance is pricing. Let's say that you have designed a game where you flip 2 coins. If the user gets 2 heads, they get paid 100 dollars. If they get 1 head, they get paid 80 dollars. Otherwise, they get nothing. How much should you charge them such that the game is fair? Fair as in you continue to make a profit, but also no one can give a lower price to steal your customers. As we create more and more complicated payouts, we will require more math to calculate such prices.
 
 ## What are the Computational Finance courses at CMU NOT about?
 
@@ -35,7 +35,7 @@ The course is split into mainly 2 halves. For the first half, you learn about ca
 
 Here's kind of an idea of what it looks like: Let's say there is a bank with a 20% annual interest rate. In other words, if I invest 100 dollars in the bank today, I will have 120 dollars in a year. A stock is also being sold for 200 dollars today. You can basically think of a stock as an object whose value changes every year.
 
-You and your friend Jerick agree on a trade. You will pay Jerick 2 stocks in 1 year and 3 stocks in 2 years. In return, Jerick will pay you $K$ dollars in 3 years. How much should $K$ be such that neither is 'exploting the other'?
+You and your friend Jerick agree on a trade. You will pay Jerick 2 stocks in 1 year and 3 stocks in 2 years. In return, Jerick will pay you $K$ dollars in 3 years. How much should $K$ be such that neither is 'exploiting the other'?
 
 In order to solve such a problem, we use the concept of replication. Basically, what can we do right now such that we have what we need to pay at the later times? So Jerick needs to pay $K$ dollars in 3 years. That means that if Jerick invests $K/1.2$ dollars in the bank in 2 years, it will grow to $K$ dollars in 3 years. Hence, Jerick just invests $K/1.2^3$ right now, and he will have $K$ dollars to pay you in 3 years.
 
@@ -45,7 +45,7 @@ $50\cdot 5=250$.
 Equating them together, you have that 
 $K/1.2^3=250 \implies K=432$
 
-As the course goes on, you get introduced to more complicated securities, but the main idea is the same: Your goal is to find a way to replicate what would happen in the future based on prices of today.
+As the course goes on, you get introduced to more complicated securities, but the main idea is the same: Your goal is to find a way to replicate what would happen in the future based on prices today.
 
 For the second half of the course, you get introduced to risk-neutral probabilities, where basically, you obtain the formula: 
 $V_0=\frac{1}{1+r}\tilde{E}[V_1]$, where $r$ is the interest rate, $V_n$ is the price of the security at time $n$. In plain English, it just means that the time-0 price of a security should just be the average payout discounted back, which kind of makes sense intuitively. The course then also introduces the fundamental theorem of asset pricing, which basically relates arbitrage and risk-neutral measures.
@@ -60,9 +60,10 @@ But as you can see, the course focuses a lot more on pricing rather than finance
 
 
 Prerequisite: 21-270 and Calc 3
+
 Co-requisite: Probability
 
-So, remember how in 21-270 you managed to prices securities in 1-period? 21-370 basically extends that to multiple periods.
+So, remember how in 21-270 you managed to prices securities in a 1-period model? 21-370 basically extends that to multiple periods.
 
 In 270, it has been proved that the value of a portfolio changes by
 $X_1=\Delta S_1+(X_0-\Delta S_0)(1+r)$ where $\Delta$ is some trading strategy. It has also been shown that we can calculate $\tilde{p}=\frac{1+r-d}{u-d}$ and $\tilde{q}=1-\tilde{p}$ for the risk neutral probabilities given $u$ and $d$. 
@@ -74,7 +75,7 @@ Hence, if we know the payout at time 4, we can calculate the different possible 
 
 We then realize that this requires a lot of computation, and wonder if there is a better method to solve it.
 
- Hence, the course then goes into conditional expectation and some very intro measure theory, just so they can be used later. You will then learn about martingales, which is basically a process whose expected value stays constant over time. Here, we have random variables which are different over time, which is kind of new to most people, since it is does bring in some stochastic calculus.
+ Hence, the course then goes into conditional expectation and some very intro measure theory, just so those concepts can be used later. You will then learn about martingales, which is basically a process whose expected value stays constant over time. Here, we have random variables which are different over time, which is kind of new to most people, since it is does bring in some stochastic calculus.
 
 Martingales have the neat property in which $E[M_n]=M_0$. Hence, our idea is that we can "match" our current security with a martingale, and using some calculation, things simplify a lot.
 
@@ -115,7 +116,7 @@ $dX_t=\Delta_t dS_t+r(X_t-\Delta_t S_t) dt$
 where we can derive the black-scholes PDE.
 
 For the second half of the course, we delve into multi-dimensional ito calculus, so we can have portfolios with different stocks. We also have to derive new risk neutral measures, since our old risk neutral measure with the $\tilde{p}=\frac{1+r-d}{u-d}$ doesn't work for our use. However, the main idea is still the same:
-$V_t=\frac{1}{D_t}\tilde{E}_t(D_TV_t)$, looks similar to what we started with right?
+$V_t=\frac{1}{D_t}\tilde{E}_t(D_TV_T)$, looks similar to what we started with right?
 
 The course then ends with a muldimentional-market, where basically, we can have stocks dependent on more than 1 brownian motion, and concludes with an updated fundamental theorem of asset pricing.
 
